@@ -235,22 +235,63 @@ else:
     #biology
     if(bio>0 and bio<33):
       print("F")
-      phy_g = 0.0
+      bio_g = 0.0
     elif(bio>32 and bio<40):
       print("D")
-      phy_g = 1.0
+      bio_g = 1.0
     elif(bio>39 and bio<50):
       print("C")
-      phy_g = 2.0
+      bio_g = 2.0
     elif(bio>49 and bio<60):
       print("B") 
-      phy_g = 3.0   
+      bio_g = 3.0   
     elif(bio>59 and bio<70):
       print("A-")
-      phy_g = 3.5
+      bio_g = 3.5
     elif(bio>69 and bio<80):
       print("A")
-      phy_g = 4.0
+      bio_g = 4.0
     else:
        print("A+")
-       phy_g = 5.0               
+       bio_g = 5.0 
+
+    #hm
+    if(hm>0 and hm<33):
+      print("F")
+      hm_g = 0.0
+    elif(hm>32 and hm<40):
+      print("D")
+      hm_g = 1.0
+    elif(hm>39 and hm<50):
+      print("C")
+      hm_g = 2.0
+    elif(hm>49 and hm<60):
+      print("B") 
+      hm_g = 3.0   
+    elif(hm>59 and hm<70):
+      print("A-")
+      hm_g = 3.5
+    elif(hm>69 and hm<80):
+      print("A")
+      hm_g = 4.0
+    else:
+       print("A+")
+       hm_g = 5.0 
+
+
+avg_g = (b_g  + e_g + gm_g + r_g + ss_g + ict_g + phy_g + chem_g + bio_g + hm_g)/10
+
+if(avg_g>=0 and avg_g<1):
+      print("F")
+elif(avg_g>=1 and avg_g<2):
+      print("D")
+elif(avg_g>=2 and avg_g<3):
+      print("C")
+elif(avg_g>=3 and avg_g<3.5):
+      print("B")    
+elif(avg_g>=3.5 and avg_g<4):
+      print("A-")
+elif(avg_g>=4 and avg_g<5):
+      print("A")
+else:
+     print("A+")
